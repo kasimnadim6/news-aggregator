@@ -22,7 +22,9 @@ const Navbar = ({ menuList, searchQuery, setSearchQuery }: NavbarProps) => {
       setSearchQuery(searchQueryRef.current.value);
     }
   };
-  const changeMenuHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const changeMenuHandler = (
+    e: React.MouseEvent<HTMLUListElement, MouseEvent>
+  ) => {
     setIsNavOpen(false);
     const searchKey = (e.target as HTMLButtonElement).getAttribute(
       'data-search_key'
@@ -60,7 +62,9 @@ const Navbar = ({ menuList, searchQuery, setSearchQuery }: NavbarProps) => {
       <div className="block sm:hidden">
         <ul
           className="flex gap-4 font-light text-base tracking-wide cursor-pointer"
-          onClick={(e) => changeMenuHandler(e)}
+          onClick={(e: React.MouseEvent<HTMLUListElement, MouseEvent>) =>
+            changeMenuHandler(e)
+          }
         >
           {menuList.map((menu) => {
             const isSelected = searchQuery.toLowerCase() === menu.toLowerCase();

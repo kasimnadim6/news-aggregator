@@ -3,7 +3,6 @@ import HeadLines from './HeadLines';
 import { IResponse } from '../../interface/Response';
 import useAPIInvoke from '../../hooks/useAPIInvoke';
 import HeadLineSkeleton from '../common/Skeletons/HeadLineSkeleton';
-import { IArticle } from '../../interface/Article';
 import { filterArticles } from '../../utils';
 
 type HeadLinesContainerProps = {

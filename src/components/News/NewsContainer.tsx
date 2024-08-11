@@ -4,7 +4,6 @@ import { IResponse } from '../../interface/Response';
 import News from './News';
 import useAPIInvoke from '../../hooks/useAPIInvoke';
 import ArticleSkeleton from '../common/Skeletons/ArticleSkeleton';
-import { IArticle } from '../../interface/Article';
 import { filterArticles } from '../../utils';
 
 type NewsProps = {

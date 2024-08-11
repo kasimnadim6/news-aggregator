@@ -17,7 +17,7 @@ const PersonalizedNews = ({ searchQuery = 'all' }: PersonalizedNewsProps) => {
     totalResults: 0,
   });
   const [isFilterSelected, setIsFilterSelected] = useState(false);
-  const [sources, setSources] = useState([]);
+  // const [sources, setSources] = useState([]);
   const categories = [
     'Business',
     'Entertainment',
